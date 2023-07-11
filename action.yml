@@ -1,0 +1,16 @@
+name: 'Telegram Message send'
+description: 'Sends message to telegram chat'
+author: 'ryadom'
+inputs: 
+  chat:
+    description: 'Chat to send: chat id or @channel_name'
+    required: true
+  token:
+    description: 'Telegram Bot token'
+    required: true
+  message:
+    description: 'Message'
+    required: true
+runs:
+  using: 'node16'
+  main: 'main.js'
