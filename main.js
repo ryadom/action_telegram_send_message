@@ -29,7 +29,9 @@ function escape(text) {
         const message = core.getInput('message');
         await send_message(telegramToken, chatId, message);    
     } catch (error) {
-      core.info(error.response);
+      if (error.response.data) {
+        core.info(error.response.data);
+      }
       core.setFailed(error.message);
     }
   })();
