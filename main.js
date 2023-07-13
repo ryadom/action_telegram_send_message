@@ -30,7 +30,7 @@ function escape(text) {
         await send_message(telegramToken, chatId, message);    
     } catch (error) {
       if (error.response.data) {
-        core.info(error.response.data);
+        core.info(JSON.stringify(error.response.data));
       }
       core.setFailed(error.message);
     }
